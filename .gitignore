@@ -1,0 +1,15 @@
+# ── Operating system ──────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Secrets – never commit real credentials ───────────────────────────────────
+# The .env file in code-server/ is committed as a *template* (all values empty).
+# If you fill in passwords there, add a local override instead and list it here.
+code-server/.env.local
+code-server/.env.*.local
+
+# ── code-server runtime data ──────────────────────────────────────────────────
+# Everything inside config/ is generated at container runtime.
+# Only the placeholder (.gitkeep) should be tracked.
+config/*
+!config/.gitkeep
